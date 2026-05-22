@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Agromack.cl</title>
+<meta name="description" content="Conversemos sobre tu campo o tu planta. Patrick y Andrew MacKinnon. Formulario, correo y WhatsApp directo.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contacto">
+<meta property="og:description" content="Conversemos sobre tu campo o tu planta. Patrick y Andrew MacKinnon. Formulario, correo y WhatsApp directo.">
+<meta property="og:image" content="img/walnut-leaves.webp">
+<meta property="og:url" content="https://agromack.cl">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body><nav class="nav" id="mainNav"><div class="nav-inner">
+<a href="index.html" class="brand" aria-label="MacKinnon Servicios Agropecuarios"><img src="img/logo.png" alt="MacKinnon" class="brand-logo"></a>
+<div class="nav-menu">
+<a href="index.html">Inicio</a>
+<a href="patrick.html">Asesoría Agrícola</a>
+<a href="andrew.html">Asesoría pecuaria y pesquera</a>
+<a href="imacimus.html">IMACIMUS</a>
+<a href="capacitaciones.html">Capacitaciones</a>
+<a href="contacto.html" class="active">Contacto</a>
+</div>
+<div class="nav-cta"><a href="contacto.html" class="btn btn-primary btn-sm">Conversemos</a>
+<button class="hamburger" id="ham" aria-label="Menú" aria-expanded="false"><span></span></button></div>
+</div></nav>
+<div class="mobile-menu" id="mobMenu">
+<a href="index.html" onclick="closeMob()">Inicio</a>
+<a href="patrick.html" onclick="closeMob()">Patrick</a>
+<a href="andrew.html" onclick="closeMob()">Andrew</a>
+<a href="imacimus.html" onclick="closeMob()">IMACIMUS 10</a>
+<a href="capacitaciones.html" onclick="closeMob()">Capacitaciones</a>
+<a href="contacto.html" onclick="closeMob()">Contacto</a>
+</div>
+<section class="mini-hero" style="padding:140px 0 40px;">
+  <div class="container">
+    <div style="max-width:720px;">
+      <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep">/</span><span>Contacto</span></div>
+      <span class="eyebrow">Conversemos</span>
+      <h1 style="margin:14px 0 16px;">Cuéntanos qué necesitas.</h1>
+      <p style="font-size:1.08rem;">Respondemos a la brevedad por formulario, correo o WhatsApp. La primera conversación es siempre sin compromiso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section contacto" style="padding-top:48px;">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="tab-group" role="tablist">
+          <button class="tab-btn active patrick" onclick="setTab('patrick',event)" id="tab-p" role="tab"><span class="tab-dot"></span>Patrick · Riego</button>
+          <button class="tab-btn andrew" onclick="setTab('andrew',event)" id="tab-a" role="tab"><span class="tab-dot"></span>Andrew · Inocuidad</button>
+        </div>
+        <form class="c-form active" id="cf-patrick" onsubmit="return submitForm(event,'patrick')">
+          <div class="fg-row">
+            <div class="fg"><label>Tu nombre</label><input type="text" name="name" required placeholder="Nombre completo"></div>
+            <div class="fg"><label>Correo</label><input type="email" name="email" required placeholder="tu@correo.cl"></div>
+          </div>
+          <div class="fg-row">
+            <div class="fg"><label>Teléfono (opcional)</label><input type="tel" name="phone" placeholder="+56 9 ..."></div>
+            <div class="fg"><label>Servicio</label>
+              <select name="service">
+                <option value="">Selecciona</option>
+                <option>Diagnóstico de riego</option>
+                <option>Plan de fertirriego</option>
+                <option>Proyecto de riego</option>
+                <option>Capacitación técnica</option>
+                <option>Análisis IMACIMUS 10</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Mensaje</label><textarea name="message" required placeholder="Cuéntanos sobre tu huerto, cultivo o problema a resolver..."></textarea></div>
+          <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>Este mensaje irá a patrick@agromack.cl</p>
+          <button type="submit" class="btn btn-primary form-submit">Enviar a Patrick <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        </form>
+        <form class="c-form" id="cf-andrew" onsubmit="return submitForm(event,'andrew')">
+          <div class="fg-row">
+            <div class="fg"><label>Tu nombre</label><input type="text" name="name" required placeholder="Nombre completo"></div>
+            <div class="fg"><label>Correo</label><input type="email" name="email" required placeholder="tu@correo.cl"></div>
+          </div>
+          <div class="fg-row">
+            <div class="fg"><label>Teléfono (opcional)</label><input type="tel" name="phone" placeholder="+56 9 ..."></div>
+            <div class="fg"><label>Servicio</label>
+              <select name="service">
+                <option value="">Selecciona</option>
+                <option>Asesoría avícola</option>
+                <option>Auditoría APL</option>
+                <option>Auditoría BPM</option>
+                <option>Implementación HACCP</option>
+                <option>Gerencia pesquera</option>
+                <option>Inocuidad alimentaria</option>
+              </select>
+            </div>
+          </div>
+          <div class="fg"><label>Mensaje</label><textarea name="message" required placeholder="Describe tu empresa, rubro y el tipo de asesoría que buscas..."></textarea></div>
+          <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>Este mensaje irá a andrew@agromack.cl</p>
+          <button type="submit" class="btn btn-teal form-submit">Enviar a Andrew <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        </form>
+      </div>
+
+      <div>
+        <div class="c-card patrick" id="ci-patrick">
+          <div class="c-head">
+            <div class="c-avatar"><img src="img/patrick-portrait.webp" alt="Patrick"></div>
+            <div><h3>Patrick MacKinnon</h3><div class="c-title">Ing. Agrónomo · Mg. en Riego</div></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Correo</div><a href="mailto:patrick@agromack.cl">patrick@agromack.cl</a></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 2 1.18 2 2 0 0 1 4 0h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 14.92z"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Teléfono</div><a href="tel:+56992783969">+56 9 9278 3969</a></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Zona de trabajo</div><span>RM · Valparaíso · O'Higgins · Maule</span></div>
+          </div>
+          <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="c-wa-img"><img src="img/whatsapp-patrick.png" alt="Escríbeme por WhatsApp"></a>
+        </div>
+
+        <div class="c-card andrew" id="ci-andrew" style="display:none;">
+          <div class="c-head">
+            <div class="c-avatar"><img src="img/andrew-portrait.png" alt="Andrew"></div>
+            <div><h3>Andrew MacKinnon</h3><div class="c-title">Méd. Veterinario · Inocuidad</div></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Correo</div><a href="mailto:andrew@agromack.cl">andrew@agromack.cl</a></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.07 9.81 19.79 19.79 0 0 1 2 1.18 2 2 0 0 1 4 0h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 14.92z"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Teléfono</div><a href="tel:+56998791270">+56 9 9879 1270</a></div>
+          </div>
+          <div class="c-row">
+            <div class="c-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+            <div class="c-row-text"><div class="c-row-label">Disponibilidad</div><span>Visitas, auditorías y docencia</span></div>
+          </div>
+          <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="c-wa-img"><img src="img/whatsapp-andrew.png" alt="Escríbeme por WhatsApp"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">Preguntas frecuentes</span><h2 style="margin-top:14px;">Dudas comunes.</h2></div>
+      <p>Si tu pregunta no está aquí, escríbenos por WhatsApp y respondemos directo.</p>
+    </div>
+    <div class="faq-grid">
+      <div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Trabajan en todo Chile o solo en la zona central?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Patrick opera principalmente en Región Metropolitana, Valparaíso, O'Higgins y Maule. Andrew tiene mayor flexibilidad según el servicio. Conversémoslo caso a caso.</p></div></div></div>
+        <div class="faq-item" style="margin-top:12px;"><button class="faq-q" onclick="toggleFaq(this)">¿Cuándo veré resultados con Patrick?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Un diagnóstico entrega resultados inmediatos. Planes de fertirriego y manejo muestran mejoras a partir de la primera temporada con seguimiento continuo.</p></div></div></div>
+        <div class="faq-item" style="margin-top:12px;"><button class="faq-q" onclick="toggleFaq(this)">¿El servicio incluye visitas en terreno?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Sí. Patrick realiza visitas mensuales de seguimiento. Andrew realiza auditorías y acompañamiento directo en planta o granja según el servicio contratado.</p></div></div></div>
+      </div>
+      <div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Pueden implementar HACCP en una empresa pequeña?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Sí. Andrew tiene experiencia en empresas de distinto tamaño. El diseño del sistema se adapta a la realidad operacional de cada planta.</p></div></div></div>
+        <div class="faq-item" style="margin-top:12px;"><button class="faq-q" onclick="toggleFaq(this)">¿Cómo es el proceso para comenzar?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Contáctanos por WhatsApp o formulario. Coordinamos una primera conversación para entender tu situación y presupuestar la asesoría. Sin compromiso inicial.</p></div></div></div>
+        <div class="faq-item" style="margin-top:12px;"><button class="faq-q" onclick="toggleFaq(this)">¿Trabajan con OTEC o instituciones?<span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><div class="faq-a-inner"><p>Sí. Patrick presta capacitaciones a OTEC e instituciones públicas y privadas. Andrew también genera cursos en inocuidad según requerimiento.</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid">
+<div><div class="footer-brand"><img src="img/logo.png" alt="MacKinnon" class="brand-logo"></div>
+<p class="footer-blurb" style="margin-top:16px;">Riego, agricultura de precisión, inocuidad y producción pecuaria.</p></div>
+<div class="footer-col"><h5>Servicios</h5>
+<a href="patrick.html">Patrick · Riego</a>
+<a href="andrew.html">Andrew · Inocuidad</a>
+<a href="imacimus.html">IMACIMUS 10</a>
+<a href="capacitaciones.html">Capacitaciones</a></div>
+<div class="footer-col"><h5>Navegación</h5>
+<a href="index.html">Inicio</a>
+<a href="contacto.html">Contacto</a></div>
+<div class="footer-col"><h5>Contacto</h5>
+<a href="mailto:patrick@agromack.cl">patrick@agromack.cl</a>
+<a href="mailto:andrew@agromack.cl">andrew@agromack.cl</a>
+<a href="https://wa.me/56992783969">+56 9 9278 3969 · Patrick</a>
+<a href="https://wa.me/56998791270">+56 9 9879 1270 · Andrew</a></div></div>
+<div class="footer-mid">
+      <div class="footer-social">
+        <span class="footer-social-label">Síguenos</span>
+        <a href="https://www.linkedin.com/company/agromackinnon/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
+        <a href="https://www.instagram.com/agromackinnon/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram Agromackinnon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+        <a href="https://www.instagram.com/agromack_av/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram Servicios Avícolas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+      </div>
+      <div class="footer-policies">
+        <a href="politica-calidad.html">Política de Calidad</a>
+        <a href="politica-privacidad.html">Política de Privacidad</a>
+      </div>
+    </div>
+<div class="footer-bottom"><span>© 2026 MacKinnon Servicios Agropecuarios · agromack.cl</span><span>Hecho para el campo chileno</span></div>
+</div></footer>
+<div class="wa-float">
+<a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="wa-float-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Patrick</span></a>
+<a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="wa-float-btn andrew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Andrew</span></a>
+</div>
+<script src="js/main.js"></script></body></html>
