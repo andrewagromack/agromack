@@ -315,6 +315,8 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.7);padding:72px 0 32p
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:1024px){
+  .nav-menu,.nav-cta .btn:not(.btn-wa){display:none}
+  .hamburger{display:flex}
   .hero-grid,.svc-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .hero-collage{height:480px;width:100%;max-width:520px;margin:0 auto}
   .section-head{grid-template-columns:1fr;gap:24px;align-items:start}
@@ -523,8 +525,6 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.7);padding:72px 0 32p
   .compare tr td.highlight::before{color:var(--teal-deep)}
   .compare tr td.highlight{background:rgba(31,188,189,.06)}
   .section{padding:72px 0}
-  .nav-menu,.nav-cta .btn:not(.btn-wa){display:none}
-  .hamburger{display:flex}
   .hero{padding:104px 0 56px}
   .hero-collage{height:420px}
   .svc-cards{grid-template-columns:1fr}
