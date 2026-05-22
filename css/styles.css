@@ -510,6 +510,18 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.7);padding:72px 0 32p
   .ions-grid{grid-template-columns:repeat(2,1fr)}
   .compare{font-size:.84rem}
   .compare th,.compare td{padding:12px 14px}
+  /* compare → stacked cards on mobile */
+  .compare{display:block;border:none;background:transparent;border-radius:0;overflow:visible;box-shadow:none}
+  .compare thead{display:none}
+  .compare tbody{display:flex;flex-direction:column;gap:14px}
+  .compare tr{display:block;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .compare tr th,.compare tr td{display:block;width:100%;border:none;padding:0}
+  .compare tr > th:first-child{padding:14px 18px;background:var(--paper-2);font-weight:700;color:var(--navy);font-size:.95rem;border-bottom:1px solid var(--line)}
+  .compare tr td{padding:12px 18px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;border-bottom:1px solid var(--line);font-size:.92rem}
+  .compare tr td:last-child{border-bottom:none}
+  .compare tr td::before{content:attr(data-label);font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+  .compare tr td.highlight::before{color:var(--teal-deep)}
+  .compare tr td.highlight{background:rgba(31,188,189,.06)}
   .section{padding:72px 0}
   .nav-menu,.nav-cta .btn:not(.btn-wa){display:none}
   .hamburger{display:flex}
