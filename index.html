@@ -11,6 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVD6EC75QZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CVD6EC75QZ');</script>
+<link rel="preload" as="image" href="img/index-hero-aves.webp" type="image/webp">
+<link rel="preload" as="image" href="img/index-hero-nogales-carousel.webp" type="image/webp">
+<link rel="preload" as="image" href="img/index-hero-pescado-carousel.webp" type="image/webp">
+<link rel="preload" as="image" href="img/index-hero-riego-carousel.webp" type="image/webp">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/index.css">
 
@@ -78,6 +82,12 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg-carousel" aria-hidden="true">
+    <span class="hero-bg-slide hero-bg-aves is-active"></span>
+    <span class="hero-bg-slide hero-bg-nogales"></span>
+    <span class="hero-bg-slide hero-bg-pescado"></span>
+    <span class="hero-bg-slide hero-bg-riego"></span>
+  </div>
   <div class="hero-inner">
     <div>
       <div class="hero-label"><span class="hero-dot"></span>MacKinnon Servicios Agropecuarios · Chile</div>
@@ -90,24 +100,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
       </div>
-    </div>
-    <div class="hero-specs">
-      <a href="patrick.html" class="hero-spec">
-        <div class="hs-avatar"><img src="img/patrick-portrait.webp" alt="Patrick" decoding="async" loading="lazy"></div>
-        <div class="hs-info">
-          <div class="hs-name">Patrick MacKinnon</div>
-          <div class="hs-role">Ing. Agrónomo, Mg. · Riego &amp; Agricultura de Precisión</div>
-        </div>
-        <div class="hs-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="andrew.html" class="hero-spec">
-        <div class="hs-avatar"><img src="img/andrew-portrait.webp" alt="Andrew" decoding="async" loading="lazy"></div>
-        <div class="hs-info">
-          <div class="hs-name">Andrew MacKinnon</div>
-          <div class="hs-role">Méd. Veterinario · Inocuidad, Calidad &amp; Producción Pecuaria</div>
-        </div>
-        <div class="hs-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
     </div>
   </div>
   <div class="hero-trust">
@@ -339,5 +331,19 @@
 </div>
 
 <script src="js/main.js"></script>
+
+<script id="heroCarouselRuntime">
+(function(){
+  const slides = Array.from(document.querySelectorAll('.hero-bg-slide'));
+  if (slides.length < 2) return;
+  let current = slides.findIndex(slide => slide.classList.contains('is-active'));
+  if (current < 0) { current = 0; slides[0].classList.add('is-active'); }
+  window.setInterval(function(){
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }, 5000);
+})();
+</script>
 </body>
 </html>
