@@ -44,6 +44,7 @@
   "description": "Distribución, capacitación y soporte técnico para IMACIMUS en aplicaciones agrícolas, agua de riego y diagnóstico nutricional."
 }
 </script>
+  <link rel="preload" as="image" href="img/imacimus-hero.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -78,15 +79,17 @@
     <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-teal">WhatsApp Andrew</a>
   </div>
 </div>
-<section class="mini-hero" style="position:relative">
+<section class="mini-hero imac-hero" style="position:relative;background:#f4f7fb">
   <div style="position:absolute;inset:0;z-index:0">
-    <img id="imac-bg-img" src="img/imacimus-hero.webp" alt="Kit IMACIMUS 10" style="width:100%;height:100%;object-fit:cover;object-position:65% center;display:block" decoding="async">
-    <div id="imac-bg-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,rgba(5,15,45,.85) 0%,rgba(5,15,45,.60) 45%,rgba(5,15,45,.10) 100%)"></div>
+    <img id="imac-bg-img" src="img/imacimus-hero.webp" alt="Kit IMACIMUS 10" style="width:100%;height:100%;object-fit:cover;object-position:65% center;display:block" decoding="async" loading="eager" fetchpriority="high">
+    <div id="imac-bg-overlay" style="position:absolute;inset:0;background:transparent"></div>
   </div>
   <style>
+  .imac-hero::before{display:none}
+  .imac-hero.hero-loaded #imac-bg-overlay{background:linear-gradient(to right,rgba(5,15,45,.85) 0%,rgba(5,15,45,.60) 45%,rgba(5,15,45,.10) 100%) !important}
   @media(max-width:768px){
     #imac-bg-img{object-position:65% 35%}
-    #imac-bg-overlay{background:linear-gradient(to bottom,rgba(5,15,45,.82) 0%,rgba(5,15,45,.65) 60%,rgba(5,15,45,.82) 100%) !important}
+    .imac-hero.hero-loaded #imac-bg-overlay{background:linear-gradient(to bottom,rgba(5,15,45,.82) 0%,rgba(5,15,45,.65) 60%,rgba(5,15,45,.82) 100%) !important}
   }
   </style>
   <div class="container">
@@ -412,6 +415,16 @@
   track.addEventListener('scroll', update);
   window.addEventListener('resize', update);
   update();
+})();
+</script>
+<script>
+(function(){
+  const imacHero = document.querySelector('.imac-hero');
+  const imacHeroImage = document.getElementById('imac-bg-img');
+  if (!imacHero || !imacHeroImage) return;
+  const markLoaded = () => imacHero.classList.add('hero-loaded');
+  if (imacHeroImage.complete) markLoaded();
+  else imacHeroImage.addEventListener('load', markLoaded, { once: true });
 })();
 </script>
 </body>
