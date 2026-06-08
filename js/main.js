@@ -22,6 +22,14 @@ function closeMob() {
   document.body.style.overflow = "";
 }
 
+document.addEventListener("keydown", (ev) => {
+  if (ev.key === "Escape" && mobOpen) closeMob();
+});
+document.addEventListener("click", (ev) => {
+  if (!mobOpen || !mob || !ham) return;
+  if (!mob.contains(ev.target) && !ham.contains(ev.target)) closeMob();
+});
+
 // Tabs (used on contacto page)
 function setTab(p, ev) {
   if (ev) ev.preventDefault();
@@ -51,7 +59,7 @@ function submitForm(e, who) {
   const f = e.target;
   const fd = new FormData(f);
   const to = who === "patrick" ? "patrick@agromack.cl" : "andrew@agromack.cl";
-  const subject = `Consulta Agromack — ${fd.get("service") || "Sin especificar"}`;
+  const subject = `Solicitud Agromack — ${fd.get("service") || "Sin especificar"}`;
   const body = `Nombre: ${fd.get("name")}\nCorreo: ${fd.get("email")}\nTeléfono: ${fd.get("phone") || "-"}\nServicio: ${fd.get("service") || "-"}\n\nMensaje:\n${fd.get("message")}`;
   window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   return false;
