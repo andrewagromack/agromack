@@ -14,20 +14,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IMACIMUS 10 — Análisis nutricional en terreno — Agromack.cl</title>
 <meta name="description" content="Laboratorio de nutrición vegetal portátil. Mide hasta 10 iones en minutos directamente en el huerto. Patrick MacKinnon, distribuidor oficial en Chile.">
-<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="icon" type="image/webp" href="img/logo.webp">
 <meta property="og:type" content="website">
 <meta property="og:title" content="IMACIMUS 10 — Análisis nutricional en terreno — MacKinnon Servicios Agropecuarios">
 <meta property="og:description" content="Laboratorio de nutrición vegetal portátil. Mide hasta 10 iones en minutos directamente en el huerto. Patrick MacKinnon, distribuidor oficial en Chile.">
-<meta property="og:image" content="https://agromack.cl/img/og-share.png">
+<meta property="og:image" content="https://agromack.cl/img/og-share.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MacKinnon Servicios Agropecuarios">
 <meta property="og:url" content="https://agromack.cl">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://agromack.cl/img/og-share.png">
+<meta name="twitter:image" content="https://agromack.cl/img/og-share.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
     <a href="index.html" class="brand" aria-label="MacKinnon Servicios Agropecuarios">
-      <img src="img/logo.png" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
+      <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
     </a>
     <div class="nav-menu">
       <a href="index.html">Inicio</a>
@@ -63,25 +63,30 @@
     <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-teal">WhatsApp Andrew</a>
   </div>
 </div>
-<section class="mini-hero">
+<section class="mini-hero" style="position:relative">
+  <div style="position:absolute;inset:0;z-index:0">
+    <img id="imac-bg-img" src="img/imacimus-hero.webp" alt="Kit IMACIMUS 10" style="width:100%;height:100%;object-fit:cover;object-position:65% center;display:block">
+    <div id="imac-bg-overlay" style="position:absolute;inset:0;background:linear-gradient(to right,rgba(5,15,45,.85) 0%,rgba(5,15,45,.60) 45%,rgba(5,15,45,.10) 100%)"></div>
+  </div>
+  <style>
+  @media(max-width:768px){
+    #imac-bg-img{object-position:65% 35%}
+    #imac-bg-overlay{background:linear-gradient(to bottom,rgba(5,15,45,.82) 0%,rgba(5,15,45,.65) 60%,rgba(5,15,45,.82) 100%) !important}
+  }
+  </style>
   <div class="container">
-    <div class="mini-hero-inner">
-      <div>
-        <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep">/</span><a href="patrick.html">Asesoría Agrícola</a><span class="sep">/</span><span>IMACIMUS 10</span></div>
-        <span class="eyebrow">Tecnología destacada</span>
-        <h1>IMACIMUS 10</h1>
-        <p style="font-size:1.2rem;">El laboratorio de nutrición vegetal que cabe en tu camioneta. Mide hasta 10 iones directamente en el campo, con resultados en minutos.</p>
-        <div class="badge-row">
-          <span class="badge">🇨🇱 Distribuidor oficial en Chile</span>
-          <span class="badge navy">⚡ Resultados en minutos</span>
-        </div>
-        <div class="person-cta-row">
-          <a href="https://wa.me/56992783969?text=Hola%20Patrick%2C%20quiero%20consultar%20por%20IMACIMUS%2010" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Patrick</a>
-          <a href="contacto.html" class="btn btn-ghost">Solicitar información</a>
-        </div>
+    <div style="position:relative;z-index:1">
+      <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep">/</span><a href="patrick.html">Asesoría Agrícola</a><span class="sep">/</span><span>IMACIMUS 10</span></div>
+      <span class="eyebrow">Tecnología destacada</span>
+      <h1>IMACIMUS 10</h1>
+      <p style="font-size:1.1rem;max-width:540px;margin-bottom:24px">El laboratorio de nutrición vegetal que cabe en tu camioneta. Mide hasta 10 iones directamente en el campo, con resultados en minutos.</p>
+      <div class="badge-row" style="margin-bottom:28px">
+        <span class="badge" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.9)">Distribuidor oficial en Chile</span>
+        <span class="badge navy" style="background:rgba(31,188,189,.18);border-color:rgba(31,188,189,.45);color:#1fbcbd">Resultados en minutos</span>
       </div>
-      <div class="mini-hero-img" style="aspect-ratio:1335/1178;background:rgb(223,232,228);">
-        <img src="img/imacimus-hero.png" alt="Kit IMACIMUS 10" style="object-fit:contain;">
+      <div class="person-cta-row">
+        <a href="https://wa.me/56992783969?text=Hola%20Patrick%2C%20quiero%20consultar%20por%20IMACIMUS%2010" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Patrick</a>
+        <a href="contacto.html" class="btn btn-ghost">Solicitar información</a>
       </div>
     </div>
   </div>
@@ -103,7 +108,7 @@
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Cómo funciona</span><h2 style="margin-top:14px;">Tres pasos, sin laboratorio.</h2></div>
-      <p>Patrick capacita a tu equipo y deja todo operativo para que puedas analizar cuando lo necesites.</p>
+      <p>Incluimos capacitación de uso del equipo y del software, para que puedas comenzar a analizar de forma precisa de manera inmediata.</p>
     </div>
     <div class="steps">
       <div class="step fade-up">
@@ -193,23 +198,23 @@
       </div>
       <div class="carousel-track" id="carTrack">
         <div class="carousel-slide">
-          <img src="img/imacimus/kit.jpg" alt="Kit completo IMACIMUS 10">
+          <img src="img/imacimus/kit.webp" alt="Kit completo IMACIMUS 10">
           <div class="carousel-cap"><strong>Kit completo</strong>1 equipo · 10 parámetros · 60 segundos</div>
         </div>
         <div class="carousel-slide">
-          <img src="img/imacimus/equipment-software.png" alt="Equipo conectado al software">
+          <img src="img/imacimus/equipment-software.webp" alt="Equipo conectado al software">
           <div class="carousel-cap"><strong>Software incluido</strong>Lectura simultánea y registro digital</div>
         </div>
         <div class="carousel-slide">
-          <img src="img/imacimus/probe-detail.jpg" alt="Detalle de electrodos selectivos multi-ion">
+          <img src="img/imacimus/probe-detail.webp" alt="Detalle de electrodos selectivos multi-ion">
           <div class="carousel-cap"><strong>Electrodos selectivos</strong>Cada ion tiene su sensor identificado por color</div>
         </div>
         <div class="carousel-slide">
-          <img src="img/imacimus/probe-usb.png" alt="Sonda multi-ion con conexión USB">
+          <img src="img/imacimus/probe-usb.webp" alt="Sonda multi-ion con conexión USB">
           <div class="carousel-cap"><strong>Sonda multi-ion</strong>Una sola sonda + conexión USB al notebook</div>
         </div>
         <div class="carousel-slide">
-          <img src="img/imacimus/sample.png" alt="Muestras en preparación">
+          <img src="img/imacimus/sample.webp" alt="Muestras en preparación">
           <div class="carousel-cap"><strong>Preparación de muestra</strong>Aguas, soluciones nutricionales, extractos</div>
         </div>
       </div>
@@ -314,7 +319,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="img/logo.png" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
+          <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
         </div>
         <p class="footer-blurb" style="margin-top:16px;">Riego, agricultura de precisión, inocuidad y producción pecuaria. Trabajo directo en terreno para el campo chileno.</p>
       </div>
@@ -357,8 +362,7 @@
   </div>
 </footer>
 <div class="wa-float">
-  <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="wa-float-btn" title="WhatsApp Patrick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Patrick · Riego</span></a>
-  <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="wa-float-btn andrew" title="WhatsApp Andrew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Andrew · Inocuidad</span></a>
+  <a href="https://wa.me/56992783969?text=Hola%2C%20quisiera%20consultar%20por%20el%20equipo%20analizador%20Imacimus" target="_blank" rel="noopener" class="wa-float-btn wa-solo" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg></a>
 </div>
 <script src="js/main.js"></script>
 <script>

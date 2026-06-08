@@ -14,20 +14,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrew MacKinnon · Inocuidad y Producción Pecuaria — Agromack.cl</title>
 <meta name="description" content="Asesoría en inocuidad alimentaria, HACCP, auditorías APL y BPM, y producción avícola. Méd. Veterinario y docente universitario.">
-<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="icon" type="image/webp" href="img/logo.webp">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Andrew MacKinnon · Inocuidad y Producción Pecuaria — MacKinnon Servicios Agropecuarios">
 <meta property="og:description" content="Asesoría en inocuidad alimentaria, HACCP, auditorías APL y BPM, y producción avícola. Méd. Veterinario y docente universitario.">
-<meta property="og:image" content="https://agromack.cl/img/og-share.png">
+<meta property="og:image" content="https://agromack.cl/img/og-share.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MacKinnon Servicios Agropecuarios">
 <meta property="og:url" content="https://agromack.cl">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://agromack.cl/img/og-share.png">
+<meta name="twitter:image" content="https://agromack.cl/img/og-share.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
     <a href="index.html" class="brand" aria-label="MacKinnon Servicios Agropecuarios">
-      <img src="img/logo.png" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
+      <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
     </a>
     <div class="nav-menu">
       <a href="index.html">Inicio</a>
@@ -63,35 +63,63 @@
     <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-teal">WhatsApp Andrew</a>
   </div>
 </div>
-<section class="mini-hero dark">
-  <div class="container">
-    <div class="mini-hero-inner">
-      <div>
-        <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep">/</span><span>Andrew MacKinnon</span></div>
-        <span class="eyebrow light">Inocuidad, Calidad &amp; Producción Pecuaria</span>
-        <h1>Andrew MacKinnon</h1>
-        <p>Médico Veterinario y docente universitario. Especialista en inocuidad y calidad agroalimentaria con experiencia directa en gerencia de plantas pesqueras, auditorías APL y HACCP, y producción avícola.</p>
-        <div class="badge-row">
-          <span class="badge" style="background:rgba(31,188,189,.18);color:var(--teal);border-color:rgba(31,188,189,.35);">🐔 Avicultura</span>
-          <span class="badge" style="background:rgba(31,188,189,.18);color:var(--teal);border-color:rgba(31,188,189,.35);">🐟 Pesqueras</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2);">✅ HACCP</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2);">📋 APL Oficial</span>
-        </div>
-        <div class="person-cta-row">
-          <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Andrew</a>
-          <a href="contacto.html" class="btn btn-ghost-light">Formulario de contacto</a>
-        </div>
+<style>
+/* ── ANDREW PERSON HERO ── */
+.phero{position:relative;overflow:hidden;background:linear-gradient(135deg,#071430 0%,#0e2255 55%,#0d2a5e 100%);padding-top:72px;min-height:520px}
+.phero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.phero-glow{position:absolute;right:-60px;bottom:-60px;width:580px;height:580px;border-radius:50%;background:radial-gradient(circle,rgba(31,188,189,.45) 0%,rgba(31,188,189,.12) 45%,transparent 70%);pointer-events:none;z-index:0}
+.phero-wave{position:absolute;left:0;bottom:0;width:55%;height:100%;pointer-events:none;z-index:1}
+.phero-inner{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:60px 40px 60px;min-height:508px;display:flex;align-items:center}
+.phero-text{display:flex;flex-direction:column;gap:18px;max-width:min(600px,55vw)}
+.phero-text .breadcrumb a,.phero-text .breadcrumb span{color:rgba(255,255,255,.5);font-size:.82rem}
+.phero-text .breadcrumb a:hover{color:#1fbcbd}
+.phero-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1fbcbd}
+.phero-h1{font-size:clamp(2.6rem,4.8vw,4rem);font-weight:900;text-transform:uppercase;color:#fff;line-height:.92;margin:0}
+.phero-sub{font-size:1rem;line-height:1.65;color:rgba(255,255,255,.72);max-width:500px;margin:0}
+.phero-badges{display:flex;flex-wrap:wrap;gap:6px}
+.phero-badge{padding:4px 11px;border-radius:999px;font-size:.72rem;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);white-space:nowrap}
+.phero-badge.teal{background:rgba(31,188,189,.18);border-color:rgba(31,188,189,.45);color:#1fbcbd}
+.phero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.phero-ctas .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.phero-ctas .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff;color:#fff}
+.phero-photo{position:absolute;right:150px;bottom:0;z-index:3;pointer-events:none}
+.phero-photo img{display:block;height:clamp(320px,34vw,520px);width:auto;filter:drop-shadow(-8px 0 40px rgba(31,188,189,.25))}
+@media(max-width:768px){.phero-photo{display:none}.phero-inner{padding:52px 24px 56px}.phero-text{max-width:100%}.phero-ctas{flex-direction:column}.phero-ctas .btn{width:100%;justify-content:center}}
+</style>
+
+<section class="phero">
+  <div class="phero-glow"></div>
+  <svg class="phero-wave" viewBox="0 0 700 520" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+    <path d="M-40 420 C80 380 160 200 340 280 S560 440 700 360" stroke="#1FBCBD" stroke-width="1.5" stroke-opacity=".55" fill="none"/>
+    <path d="M-40 460 C100 410 200 230 380 310 S600 470 720 390" stroke="#1FBCBD" stroke-width=".8" stroke-opacity=".3" fill="none"/>
+    <path d="M-60 380 C60 340 130 160 310 240 S530 410 680 330" stroke="#22366D" stroke-width="2" stroke-opacity=".6" fill="none"/>
+  </svg>
+  <div class="phero-inner">
+    <div class="phero-text">
+      <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep"> / </span><span>Andrew MacKinnon</span></div>
+      <div class="phero-eyebrow">Inocuidad, Calidad &amp; Producción Pecuaria</div>
+      <h1 class="phero-h1">Andrew<br>MacKinnon</h1>
+      <p class="phero-sub">Médico Veterinario y docente universitario. Especialista en inocuidad y calidad agroalimentaria con experiencia en gerencia de plantas pesqueras, auditorías APL y HACCP, y producción avícola.</p>
+      <div class="phero-badges">
+        <span class="phero-badge teal">Avicultura</span>
+        <span class="phero-badge teal">Pesqueras</span>
+        <span class="phero-badge">HACCP</span>
+        <span class="phero-badge">APL Oficial</span>
       </div>
-      <div class="mini-hero-img"><img src="img/andrew-portrait.png" alt="Andrew MacKinnon" style="object-position:center 20%;"></div>
+      <div class="phero-ctas">
+        <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-wa"><svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg> WhatsApp Andrew</a>
+        <a href="contacto.html" class="btn btn-ghost">Formulario de contacto</a>
+      </div>
     </div>
   </div>
+  <div class="phero-photo"><img src="img/andrew-portrait.webp" alt="Andrew MacKinnon"></div>
 </section>
 
 <section class="section svc-overview" style="padding:80px 0 104px">
   <div class="container">
     <div class="section-head">
       <div><span class="eyebrow">Servicios detallados</span><h2 style="margin-top:14px;">Inocuidad y producción.</h2></div>
-      <p>Acompañamiento integral desde el diagnóstico hasta la validación, con experiencia operativa real en planta y granja.</p>
+      <p style="padding: 20px 0px">Acompañamiento integral desde el diagnóstico hasta la validación, con experiencia operativa real en planta y granja.</p>
     </div>
     <div class="svc-cards">
       <div class="svc-card fade-up">
@@ -128,20 +156,78 @@
   </div>
 </section>
 
-<section class="section gallery" style="padding: 80px 0px">
+<section class="ptwork-section">
+  <style>
+  .ptwork-section{background:#0e1e45;padding:88px 0 96px}
+  .ptwork-section .container{max-width:1200px;margin:0 auto;padding:0 40px}
+  .ptwork-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:48px}
+  .ptwork-head-left .eyebrow{color:#1fbcbd}
+  .ptwork-head-left h2{color:#fff;margin-top:12px}
+  .ptwork-head-right{font-size:.95rem;color:rgba(255,255,255,.55);max-width:340px;text-align:right;line-height:1.6}
+  .ptwork-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:280px 280px;gap:14px}
+  .ptwork-item{position:relative;border-radius:16px;overflow:hidden;background:#1a2d5a}
+  .ptwork-item.featured{grid-row:span 2}
+  .ptwork-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
+  .ptwork-item:hover img{transform:scale(1.05)}
+  .ptwork-cap{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,20,48,.92) 0%,rgba(7,20,48,.5) 45%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+  .ptwork-item:hover .ptwork-cap{opacity:1;transform:translateY(0)}
+  .ptwork-cap strong{display:block;font-size:.95rem;font-weight:700;color:#fff;letter-spacing:-.01em;margin-bottom:4px}
+  .ptwork-cap span{font-size:.8rem;color:rgba(255,255,255,.72);line-height:1.4}
+  .ptwork-mob-only{display:none}
+  @media(max-width:900px){.ptwork-grid{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:12px}.ptwork-item{aspect-ratio:1/1;height:auto}.ptwork-item.featured{grid-row:span 1}.ptwork-cap{opacity:1;transform:none}.ptwork-mob-only{display:block}}
+  @media(max-width:600px){.ptwork-grid{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:10px}.ptwork-item{aspect-ratio:1/1;height:auto}.ptwork-item.featured{grid-row:span 1}.ptwork-head{flex-direction:column;align-items:flex-start}.ptwork-head-right{text-align:left}.ptwork-cap{opacity:1;transform:none}.ptwork-mob-only{display:block}}
+  </style>
   <div class="container">
-    <div class="section-head">
-      <div><span class="eyebrow">En terreno</span><h2 style="margin-top:14px;">Trabajo de Andrew.</h2></div>
-      <p>Granjas avícolas, plantas pesqueras, auditorías e implementación de buenas prácticas.</p>
+    <div class="ptwork-head">
+      <div class="ptwork-head-left">
+        <span class="eyebrow">En terreno</span>
+        <h2>Trabajo de Andrew.</h2>
+      </div>
+      <p class="ptwork-head-right"><span style="color:#ffffffff">Granjas avícolas, plantas pesqueras, auditorías e implementación de buenas prácticas.</span></p>
     </div>
-    <div class="gallery-grid">
-      <div class="gal-item"><img src="img/andrew-salmon.png" alt="Control de proceso en planta pesquera"><div class="gal-cap"><strong>Rendimiento y calidad</strong>Mejora del rendimiento y control de calidad en proceso</div></div>
-      <div class="gal-item"><img src="img/andrew-centolla.png" alt="Control de temperatura en planta pesquera"><div class="gal-cap">Control de procesos
-Implementación y auditoría HACCP / PAC en plantas pesqueras</div></div>
-      <div class="gal-item"><img src="img/andrew-team.png" alt="Andrew con equipo"><div class="gal-cap"><strong>Equipo en terreno</strong>Visita técnica con personal</div></div>
-      <div class="gal-item"><img src="img/andrew-necropsia.png" alt="Capacitación práctica"><div class="gal-cap"><strong>Capacitación práctica</strong>Curso de necropsia y diagnóstico</div></div>
-      <div class="gal-item"><img src="img/andrew-galpon.png" alt="Galpones de postura"><div class="gal-cap"><strong>Galpones de postura</strong>Visita técnica a granja avícola</div></div>
-      <div class="gal-item"><img src="img/andrew-planta.png" alt="Auditoría en planta"><div class="gal-cap"><strong>Auditoría en planta</strong>Análisis del flujo de procesos</div></div>
+    <div class="ptwork-grid">
+      <div class="ptwork-item featured">
+        <img src="img/andrew-necropsia.webp" alt="Capacitación práctica">
+        <div class="ptwork-cap">
+          <strong>Capacitación práctica</strong>
+          <span>Curso de necropsia y diagnóstico</span>
+        </div>
+      </div>
+      <div class="ptwork-item">
+        <img src="img/andrew-salmon.webp" alt="Control de proceso en planta pesquera">
+        <div class="ptwork-cap">
+          <strong>Rendimiento y calidad</strong>
+          <span>Mejora del rendimiento y control de calidad en proceso</span>
+        </div>
+      </div>
+      <div class="ptwork-item">
+        <img src="img/andrew-team.webp" alt="Equipo en terreno">
+        <div class="ptwork-cap">
+          <strong>Equipo en terreno</strong>
+          <span>Visita técnica con personal</span>
+        </div>
+      </div>
+      <div class="ptwork-item">
+        <img src="img/andrew-centolla.webp" alt="Control de temperatura">
+        <div class="ptwork-cap">
+          <strong>Control de procesos</strong>
+          <span>Implementación y auditoría HACCP / PAC en plantas pesqueras</span>
+        </div>
+      </div>
+      <div class="ptwork-item">
+        <img src="img/andrew-galpon.webp" alt="Galpones de postura">
+        <div class="ptwork-cap">
+          <strong>Galpones de postura</strong>
+          <span>Visita técnica a granja avícola</span>
+        </div>
+      </div>
+      <div class="ptwork-item ptwork-mob-only">
+        <img src="img/andrew-planta.webp" alt="Auditoría en planta">
+        <div class="ptwork-cap">
+          <strong>Auditoría en planta</strong>
+          <span>Análisis del flujo de procesos</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -155,7 +241,6 @@ Implementación y auditoría HACCP / PAC en plantas pesqueras</div></div>
         <p style="margin-top:12px;">Primera conversación sin compromiso. Coordino una visita o reunión para entender tu situación y presupuestar la asesoría.</p>
       </div>
       <div class="cta-band-actions"><a href="contacto.html" class="btn btn-teal">Ir al formulario <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-<a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Patrick</a>
 <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-ghost-light">WhatsApp Andrew</a></div>
     </div>
   </div>
@@ -167,7 +252,7 @@ Implementación y auditoría HACCP / PAC en plantas pesqueras</div></div>
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="img/logo.png" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
+          <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo">
         </div>
         <p class="footer-blurb" style="margin-top:16px;">Riego, agricultura de precisión, inocuidad y producción pecuaria. Trabajo directo en terreno para el campo chileno.</p>
       </div>
@@ -185,8 +270,8 @@ Implementación y auditoría HACCP / PAC en plantas pesqueras</div></div>
       </div>
       <div class="footer-col">
         <h5>Contacto</h5>
-        <a href="/cdn-cgi/l/email-protection#deaebfaaacb7bdb59ebfb9acb1b3bfbdb5f0bdb2"><span class="__cf_email__" data-cfemail="07776673756e646c47666075686a66646c29646b">[email&#160;protected]</span></a>
-        <a href="/cdn-cgi/l/email-protection#f2939c96809785b29395809d9f939199dc919e"><span class="__cf_email__" data-cfemail="25444b41574052654442574a4844464e0b4649">[email&#160;protected]</span></a>
+        <a href="mailto:patrick@agromack.cl">patrick@agromack.cl</a>
+        <a href="mailto:andrew@agromack.cl">andrew@agromack.cl</a>
         <a href="https://wa.me/56992783969">+56 9 9278 3969 · Patrick</a>
         <a href="https://wa.me/56998791270">+56 9 9879 1270 · Andrew</a>
       </div>
@@ -210,9 +295,8 @@ Implementación y auditoría HACCP / PAC en plantas pesqueras</div></div>
   </div>
 </footer>
 <div class="wa-float">
-  <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="wa-float-btn" title="WhatsApp Patrick"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Patrick · Riego</span></a>
-  <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="wa-float-btn andrew" title="WhatsApp Andrew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Andrew · Inocuidad</span></a>
+  <a href="https://wa.me/56998791270?text=Hola%2C%20quisiera%20consultar%20por%20los%20servicios%20ofrecidos" target="_blank" rel="noopener" class="wa-float-btn wa-solo" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg></a>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

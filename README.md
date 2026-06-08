@@ -82,7 +82,7 @@ Para que los formularios de `contacto.html` envíen sin abrir el cliente de corr
 
 | Qué cambiar | Archivo |
 |---|---|
-| Logo | `img/logo.png` (reemplaza con el mismo nombre) |
+| Logo | `img/logo.webp` (reemplaza con el mismo nombre) |
 | Colores y tipografía | `css/styles.css` (sección `:root` arriba) |
 | Texto del nav, hero, etc. | Cada `.html` directamente |
 | Teléfonos / correos | Buscar `agromack.cl`, `56992783969`, `56998791270` y reemplazar |
@@ -91,7 +91,7 @@ Para que los formularios de `contacto.html` envíen sin abrir el cliente de corr
 
 ## 📋 Checklist antes del deploy
 
-- [ ] Logo final en `img/logo.png`
+- [ ] Logo final en `img/logo.webp`
 - [ ] Editar `CNAME` con dominio real
 - [ ] Verificar correos y teléfonos en todos los archivos
 - [ ] Configurar backend de formularios (Netlify Forms / Formspree / EmailJS)
