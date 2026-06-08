@@ -1306,3 +1306,102 @@ html,body,button,input,textarea,select,a,p,li,span,small,strong,em,label,table,t
     line-height:1.02!important;
   }
 }
+
+/* ============ MAILERLITE CONTACT FORMS ============ */
+.ml-contact-form{width:100%}
+#mlb2-42354715.ml-form-embedContainer,
+#mlb2-42354437.ml-form-embedContainer{box-sizing:border-box;width:100%!important;max-width:100%!important;margin:0!important;display:block!important}
+#mlb2-42354715 .ml-form-align-center,
+#mlb2-42354437 .ml-form-align-center{width:100%!important;display:block!important;text-align:left!important}
+#mlb2-42354715 .ml-form-embedWrapper,
+#mlb2-42354437 .ml-form-embedWrapper,
+#mlb2-42354715 .ml-form-embedWrapper.embedForm,
+#mlb2-42354437 .ml-form-embedWrapper.embedForm{width:100%!important;max-width:100%!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;display:block!important;margin:0!important;padding:0!important}
+#mlb2-42354715 .ml-form-embedBody,
+#mlb2-42354437 .ml-form-embedBody,
+#mlb2-42354715 .ml-form-successBody,
+#mlb2-42354437 .ml-form-successBody{padding:0!important}
+#mlb2-42354715 .ml-block-form,
+#mlb2-42354437 .ml-block-form{width:100%;margin:0!important}
+#mlb2-42354715 .ml-form-formContent,
+#mlb2-42354437 .ml-form-formContent{width:100%;margin:0!important}
+#mlb2-42354715 .ml-form-fieldRow,
+#mlb2-42354437 .ml-form-fieldRow{width:100%;margin:0 0 14px 0!important}
+#mlb2-42354715 .ml-field-group,
+#mlb2-42354437 .ml-field-group{text-align:left!important}
+#mlb2-42354715 .ml-field-group label,
+#mlb2-42354437 .ml-field-group label{display:block!important;margin:0 0 7px 0!important;color:var(--navy-deep)!important;font-family:var(--ff-sans)!important;font-size:.92rem!important;font-weight:700!important;line-height:1.2!important;letter-spacing:-.005em!important}
+#mlb2-42354715 input.form-control,
+#mlb2-42354715 textarea.form-control,
+#mlb2-42354715 select.custom-select,
+#mlb2-42354437 input.form-control,
+#mlb2-42354437 textarea.form-control,
+#mlb2-42354437 select.custom-select{width:100%!important;min-height:48px!important;padding:13px 14px!important;border:1.5px solid var(--line)!important;border-radius:14px!important;background-color:#fff!important;color:var(--ink)!important;font-family:var(--ff-sans)!important;font-size:1rem!important;line-height:1.35!important;outline:none!important;box-sizing:border-box!important;max-width:100%!important;transition:border-color .2s ease,box-shadow .2s ease,background-color .2s ease!important}
+#mlb2-42354715 textarea.form-control,
+#mlb2-42354437 textarea.form-control{min-height:132px!important;resize:vertical!important}
+#mlb2-42354715 input.form-control:focus,
+#mlb2-42354715 textarea.form-control:focus,
+#mlb2-42354715 select.custom-select:focus,
+#mlb2-42354437 input.form-control:focus,
+#mlb2-42354437 textarea.form-control:focus,
+#mlb2-42354437 select.custom-select:focus{border-color:var(--teal)!important;box-shadow:0 0 0 4px rgba(31,188,189,.14)!important}
+#mlb2-42354715 select.custom-select,
+#mlb2-42354437 select.custom-select{appearance:none!important;background-image:linear-gradient(45deg,transparent 50%,var(--navy) 50%),linear-gradient(135deg,var(--navy) 50%,transparent 50%)!important;background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%!important;background-size:6px 6px,6px 6px!important;background-repeat:no-repeat!important;padding-right:42px!important}
+#mlb2-42354715 .ml-form-embedSubmit,
+#mlb2-42354437 .ml-form-embedSubmit{margin:20px 0 0 0!important;float:none!important;width:100%!important}
+#mlb2-42354715 .ml-form-embedSubmit button.primary,
+#mlb2-42354437 .ml-form-embedSubmit button.primary{width:100%!important;min-height:50px!important;border:0!important;border-radius:999px!important;background:linear-gradient(135deg,var(--teal),var(--teal-deep))!important;color:#fff!important;font-family:var(--ff-sans)!important;font-size:1rem!important;font-weight:800!important;line-height:1!important;padding:15px 22px!important;cursor:pointer!important;box-shadow:0 14px 28px rgba(10,114,114,.22)!important;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease!important}
+#mlb2-42354715 .ml-form-embedSubmit button.primary:hover,
+#mlb2-42354437 .ml-form-embedSubmit button.primary:hover{background:linear-gradient(135deg,var(--teal),var(--navy))!important;transform:translateY(-1px)!important;box-shadow:0 18px 34px rgba(10,114,114,.28)!important}
+#mlb2-42354715 .ml-form-embedSubmit button.loading,
+#mlb2-42354437 .ml-form-embedSubmit button.loading{background:var(--teal-deep)!important;border:0!important;border-radius:999px!important;min-height:50px!important;width:100%!important}
+#mlb2-42354715 .ml-form-embedSubmitLoad,
+#mlb2-42354437 .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}
+#mlb2-42354715 .ml-form-embedSubmitLoad:after,
+#mlb2-42354437 .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}
+@keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+#mlb2-42354715 .sr-only,
+#mlb2-42354437 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+#mlb2-42354715 .ml-form-successBody,
+#mlb2-42354437 .ml-form-successBody{padding:24px!important;border-radius:18px!important;background:rgba(31,188,189,.1)!important;border:1px solid rgba(31,188,189,.24)!important}
+#mlb2-42354715 .ml-form-successContent h4,
+#mlb2-42354437 .ml-form-successContent h4{color:var(--navy-deep)!important;font-family:var(--ff-sans)!important;font-size:1.35rem!important;font-weight:800!important;margin:0 0 8px 0!important}
+#mlb2-42354715 .ml-form-successContent p,
+#mlb2-42354437 .ml-form-successContent p{color:var(--navy)!important;font-family:var(--ff-sans)!important;font-size:1rem!important;line-height:1.5!important;margin:0!important}
+#mlb2-42354715 .ml-error input,
+#mlb2-42354715 .ml-error textarea,
+#mlb2-42354715 .ml-error select,
+#mlb2-42354437 .ml-error input,
+#mlb2-42354437 .ml-error textarea,
+#mlb2-42354437 .ml-error select{border-color:#d92d20!important;box-shadow:0 0 0 4px rgba(217,45,32,.1)!important}
+@media(max-width:640px){#mlb2-42354715 input.form-control,#mlb2-42354715 textarea.form-control,#mlb2-42354715 select.custom-select,#mlb2-42354437 input.form-control,#mlb2-42354437 textarea.form-control,#mlb2-42354437 select.custom-select{font-size:.96rem!important;border-radius:12px!important}#mlb2-42354715 textarea.form-control,#mlb2-42354437 textarea.form-control{min-height:120px!important}}
+
+/* Corrección contacto MailerLite: mantener layout 2 columnas en desktop */
+@media (min-width: 760px){
+  #mlb2-42354715 .ml-form-formContent,
+  #mlb2-42354437 .ml-form-formContent{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:14px!important;
+    width:100%!important;
+    margin:0!important;
+  }
+  #mlb2-42354715 .ml-form-fieldRow,
+  #mlb2-42354437 .ml-form-fieldRow{
+    margin:0!important;
+  }
+  #mlb2-42354715 .ml-form-fieldRow.ml-last-item,
+  #mlb2-42354437 .ml-form-fieldRow.ml-last-item{
+    grid-column:1 / -1!important;
+  }
+}
+@media (max-width: 759px){
+  #mlb2-42354715 .ml-form-formContent,
+  #mlb2-42354437 .ml-form-formContent{
+    display:block!important;
+  }
+  #mlb2-42354715 .ml-form-fieldRow,
+  #mlb2-42354437 .ml-form-fieldRow{
+    margin:0 0 14px 0!important;
+  }
+}

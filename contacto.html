@@ -39,6 +39,14 @@
   }
 }
 </script>
+
+<style>
+@media (max-width: 768px){
+  .mini-hero.dark[style*="contacto-hero.webp"]{
+    background-position: 68% center !important;
+  }
+}
+</style>
 </head>
 <body><nav class="nav" id="mainNav"><div class="nav-inner">
 <a href="index.html" class="brand" aria-label="MacKinnon Servicios Agropecuarios"><img src="img/logo.webp" alt="MacKinnon" class="brand-logo" decoding="async"></a>
@@ -61,8 +69,8 @@
 <a href="capacitaciones.html" onclick="closeMob()">Capacitaciones</a>
 <a href="contacto.html" onclick="closeMob()">Contacto</a>
 </div>
-<section class="mini-hero" style="padding:140px 0 40px;">
-  <div class="container">
+<section class="mini-hero dark" style="padding:140px 0 40px; background-image:linear-gradient(90deg, rgba(4,20,48,.92) 0%, rgba(9,41,82,.88) 28%, rgba(10,57,98,.62) 54%, rgba(9,41,82,.18) 100%), url('img/contacto-hero.webp'); background-size:cover; background-position:center center; background-repeat:no-repeat;">
+  <div class="container" style="position:relative; z-index:1;">
     <div style="max-width:720px;">
       <div class="breadcrumb"><a href="index.html">Inicio</a><span class="sep">/</span><span>Contacto</span></div>
       <span class="eyebrow">Solicitar diagnóstico</span>
@@ -80,53 +88,153 @@
           <button class="tab-btn active patrick" onclick="setTab('patrick',event)" id="tab-p" role="tab"><span class="tab-dot"></span>Patrick · Riego</button>
           <button class="tab-btn andrew" onclick="setTab('andrew',event)" id="tab-a" role="tab"><span class="tab-dot"></span>Andrew · Inocuidad</button>
         </div>
-        <form class="c-form active" id="cf-patrick" onsubmit="return submitForm(event,'patrick')">
-          <div class="fg-row">
-            <div class="fg"><label>Tu nombre</label><input type="text" name="name" required placeholder="Nombre completo"></div>
-            <div class="fg"><label>Correo</label><input type="email" name="email" required placeholder="tu@correo.cl"></div>
-          </div>
-          <div class="fg-row">
-            <div class="fg"><label>Teléfono (opcional)</label><input type="tel" name="phone" placeholder="+56 9 ..."></div>
-            <div class="fg"><label>Servicio</label>
-              <select name="service">
-                <option value="">Selecciona</option>
-                <option>Diagnóstico de riego</option>
-                <option>Plan de fertirriego</option>
-                <option>Proyecto de riego</option>
-                <option>Capacitación técnica</option>
-                <option>Análisis IMACIMUS 10</option>
-              </select>
+        <div class="c-form active ml-contact-form" id="cf-patrick">
+          <div id="mlb2-42354715" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42354715">
+            <div class="ml-form-align-center">
+              <div class="ml-form-embedWrapper embedForm">
+                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2057335/forms/189730252220532160/subscribe" data-code="" method="post" target="_blank">
+                    <div class="ml-form-formContent">
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-name">
+                          <label>Tu nombre</label>
+                          <input aria-label="name" type="text" class="form-control" name="fields[name]" autocomplete="given-name">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                          <label>Correo electrónico</label>
+                          <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" autocomplete="email">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-phone">
+                          <label>Teléfono (opcional)</label>
+                          <input aria-label="phone" type="text" class="form-control" name="fields[phone]" autocomplete="tel">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-company">
+                          <label>Empresa (opcional)</label>
+                          <input aria-label="company" type="text" class="form-control" name="fields[company]" autocomplete="organization">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-serv_agromack">
+                          <label>¿Qué necesitas?</label>
+                          <select class="custom-select" name="fields[serv_agromack]" aria-label="Servicio Agromack">
+                            <option value="">Selecciona</option>
+                            <option>Diagnóstico de riego</option>
+                            <option>Plan de riego - fertirriego</option>
+                            <option>Proyecto e implementación</option>
+                            <option>Capacitación técnica</option>
+                            <option>IMACIMUS 10 - Analizador Multiparámetros</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow ml-last-item">
+                        <div class="ml-field-group ml-field-mensajes ml-validate-required">
+                          <label>Mensaje</label>
+                          <textarea class="form-control" name="fields[mensajes]" aria-label="Mensaje" aria-required="true" maxlength="1024" placeholder="Cuéntanos sobre tu huerto, cultivo, sistema de riego o problema a resolver..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <div class="ml-form-embedSubmit">
+                      <button type="submit" class="primary">Enviar consulta agrícola</button>
+                      <button disabled="disabled" style="display:none;" type="button" class="loading">
+                        <div class="ml-form-embedSubmitLoad"></div>
+                        <span class="sr-only">Enviando...</span>
+                      </button>
+                    </div>
+                    <input type="hidden" name="anticsrf" value="true">
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none">
+                  <div class="ml-form-successContent">
+                    <h4>Solicitud recibida</h4>
+                    <p>Gracias por escribirnos. Revisaremos tu mensaje y te contactaremos a la brevedad.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="fg"><label>Mensaje</label><textarea name="message" required placeholder="Cuéntanos sobre tu huerto, cultivo o problema a resolver..."></textarea></div>
-          <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>Al enviar se abrirá tu correo con el mensaje listo para patrick@agromack.cl</p>
-          <button type="submit" class="btn btn-primary form-submit">Enviar consulta agrícola <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
-        </form>
-        <form class="c-form" id="cf-andrew" onsubmit="return submitForm(event,'andrew')">
-          <div class="fg-row">
-            <div class="fg"><label>Tu nombre</label><input type="text" name="name" required placeholder="Nombre completo"></div>
-            <div class="fg"><label>Correo</label><input type="email" name="email" required placeholder="tu@correo.cl"></div>
-          </div>
-          <div class="fg-row">
-            <div class="fg"><label>Teléfono (opcional)</label><input type="tel" name="phone" placeholder="+56 9 ..."></div>
-            <div class="fg"><label>Servicio</label>
-              <select name="service">
-                <option value="">Selecciona</option>
-                <option>Asesoría avícola</option>
-                <option>Auditoría APL</option>
-                <option>Auditoría BPM</option>
-                <option>Implementación HACCP</option>
-                <option>Gerencia pesquera</option>
-                <option>Inocuidad alimentaria</option>
-              </select>
-            </div>
-          </div>
-          <div class="fg"><label>Mensaje</label><textarea name="message" required placeholder="Describe tu empresa, rubro y el tipo de asesoría que buscas..."></textarea></div>
-          <p class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>Al enviar se abrirá tu correo con el mensaje listo para andrew@agromack.cl</p>
-          <button type="submit" class="btn btn-teal form-submit">Enviar consulta técnica <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
-        </form>
-      </div>
+        </div>
 
+        <div class="c-form ml-contact-form" id="cf-andrew">
+          <div id="mlb2-42354437" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42354437">
+            <div class="ml-form-align-center">
+              <div class="ml-form-embedWrapper embedForm">
+                <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                  <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2057335/forms/189729776858039630/subscribe" data-code="" method="post" target="_blank">
+                    <div class="ml-form-formContent">
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-name">
+                          <label>Tu nombre</label>
+                          <input aria-label="name" type="text" class="form-control" name="fields[name]" autocomplete="given-name">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                          <label>Correo electrónico</label>
+                          <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" autocomplete="email">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-phone">
+                          <label>Teléfono (opcional)</label>
+                          <input aria-label="phone" type="text" class="form-control" name="fields[phone]" autocomplete="tel">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-company">
+                          <label>Empresa (opcional)</label>
+                          <input aria-label="company" type="text" class="form-control" name="fields[company]" autocomplete="organization">
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow">
+                        <div class="ml-field-group ml-field-serv_agromack">
+                          <label>¿Qué necesitas?</label>
+                          <select class="custom-select" name="fields[serv_agromack]" aria-label="Servicio Agromack">
+                            <option value="">Selecciona</option>
+                            <option>Asesoría en granja Avícola</option>
+                            <option>Auditorías BPM - APL - Otras</option>
+                            <option>Auditoría Proceso (HACCP - BPM - SSOP)</option>
+                            <option>Implementación HACCP</option>
+                            <option>Inocuidad Alimentaria</option>
+                            <option>Gerencia pesquera - Asesoría</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="ml-form-fieldRow ml-last-item">
+                        <div class="ml-field-group ml-field-mensajes ml-validate-required">
+                          <label>Mensaje</label>
+                          <textarea class="form-control" name="fields[mensajes]" aria-label="Mensaje" aria-required="true" maxlength="1024" placeholder="Describe tu empresa, rubro y el tipo de asesoría que buscas..."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="ml-submit" value="1">
+                    <div class="ml-form-embedSubmit">
+                      <button type="submit" class="primary">Enviar consulta técnica</button>
+                      <button disabled="disabled" style="display:none;" type="button" class="loading">
+                        <div class="ml-form-embedSubmitLoad"></div>
+                        <span class="sr-only">Enviando...</span>
+                      </button>
+                    </div>
+                    <input type="hidden" name="anticsrf" value="true">
+                  </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display:none">
+                  <div class="ml-form-successContent">
+                    <h4>Solicitud recibida</h4>
+                    <p>Gracias por escribirnos. Revisaremos tu mensaje y te contactaremos a la brevedad.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <div class="c-card patrick" id="ci-patrick">
           <div class="c-head">
@@ -227,4 +335,21 @@
 <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="wa-float-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Patrick</span></a>
 <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="wa-float-btn andrew"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg><span>Andrew</span></a>
 </div>
+<script>
+function ml_webform_success_42354715() {
+  var $ = ml_jQuery || jQuery;
+  $('.ml-subscribe-form-42354715 .row-success').show();
+  $('.ml-subscribe-form-42354715 .row-form').hide();
+}
+function ml_webform_success_42354437() {
+  var $ = ml_jQuery || jQuery;
+  $('.ml-subscribe-form-42354437 .row-success').show();
+  $('.ml-subscribe-form-42354437 .row-form').hide();
+}
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>
+fetch("https://assets.mailerlite.com/jsonp/2057335/forms/189730252220532160/takel");
+fetch("https://assets.mailerlite.com/jsonp/2057335/forms/189729776858039630/takel");
+</script>
 <script src="js/main.js"></script></body></html>

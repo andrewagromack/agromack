@@ -53,17 +53,7 @@ function toggleFaq(btn) {
   if (!isOpen) { ans.classList.add("open"); btn.classList.add("open"); }
 }
 
-// Form submit -> mailto with prefilled body
-function submitForm(e, who) {
-  e.preventDefault();
-  const f = e.target;
-  const fd = new FormData(f);
-  const to = who === "patrick" ? "patrick@agromack.cl" : "andrew@agromack.cl";
-  const subject = `Solicitud Agromack — ${fd.get("service") || "Sin especificar"}`;
-  const body = `Nombre: ${fd.get("name")}\nCorreo: ${fd.get("email")}\nTeléfono: ${fd.get("phone") || "-"}\nServicio: ${fd.get("service") || "-"}\n\nMensaje:\n${fd.get("message")}`;
-  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  return false;
-}
+// Contact forms are handled by MailerLite embeds on contacto.html.
 
 // Fade-up animations
 const obs = new IntersectionObserver(

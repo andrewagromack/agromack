@@ -59,24 +59,18 @@ git push -u origin main
 - `https://agromack.cl` debería cargar el sitio.
 - Cada `git push` republica automáticamente.
 
-## 🌐 Alternativa: Netlify (recomendado si quieres formularios funcionales)
+## 📩 Formularios de contacto
 
-1. Crea cuenta en [netlify.com](https://netlify.com).
-2. **New site → Import from GitHub** → elige el repo.
-3. Build command: vacío. Publish directory: `/` (root).
-4. Deploy.
-5. Conecta dominio custom desde **Domain settings**.
+Los formularios de `contacto.html` están integrados con MailerLite mediante embeds separados:
 
-### Activar formularios Netlify (gratis, 100 envíos/mes)
-Para que los formularios de `contacto.html` envíen sin abrir el cliente de correo:
+- Patrick: formulario agrícola / riego / IMACIMUS.
+- Andrew: formulario inocuidad / HACCP / producción pecuaria-pesquera.
 
-1. Abre `contacto.html`, busca los `<form>` y agrégale el atributo `data-netlify="true"`:
-   ```html
-   <form class="c-form active" id="cf-patrick" data-netlify="true" name="contacto-patrick">
-   ```
-2. En `js/main.js`, comenta o elimina la función `submitForm` (deja que Netlify procese el envío nativamente).
-3. Push a GitHub. Netlify detectará los formularios automáticamente.
-4. Configura notificación por correo en **Forms → Settings**.
+La estética de ambos formularios se controla desde `css/styles.css`, sección **MAILERLITE CONTACT FORMS**. No volver a pegar el CSS completo generado por MailerLite salvo que se reemplace el formulario completo.
+
+## 🌐 Alternativa: Netlify
+
+El sitio sigue siendo compatible con despliegue en Netlify o GitHub Pages. Si más adelante se decide reemplazar MailerLite por Netlify Forms, habría que volver a convertir los embeds en formularios HTML nativos con `data-netlify="true"`.
 
 ## ✏️ Personalización rápida
 
