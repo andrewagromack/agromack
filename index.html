@@ -18,13 +18,12 @@
 <link rel="icon" type="image/webp" href="img/logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="preload" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"></noscript></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVD6EC75QZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CVD6EC75QZ');</script>
-<link rel="preload" as="image" href="img/index-hero-aves.webp" type="image/webp">
-<link rel="preload" as="image" href="img/index-hero-nogales-carousel.webp" type="image/webp">
-<link rel="preload" as="image" href="img/index-hero-pescado-carousel.webp" type="image/webp">
-<link rel="preload" as="image" href="img/index-hero-riego-carousel.webp" type="image/webp">
+<link rel="preload" as="image" href="img/index-hero-aves-mobile.webp" imagesrcset="img/index-hero-aves-mobile.webp 768w, img/index-hero-aves.webp 1672w" imagesizes="100vw" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/index.css">
 
@@ -55,44 +54,14 @@
   ]
 }
 </script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YP57647YDF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YP57647YDF');
-</script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1186794956275082');
-fbq('track', 'PageView');
-</script>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
-<!-- Meta Pixel Code (noscript) -->
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1186794956275082&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code (noscript) -->
-
 
 <!-- NAV -->
 <nav class="nav" id="mainNav">
   <div class="nav-inner">
     <a href="index.html" class="brand" aria-label="MacKinnon Servicios Agropecuarios">
-      <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo" decoding="async">
+      <img src="img/logo.webp" alt="MacKinnon Servicios Agropecuarios" class="brand-logo" width="813" height="813" decoding="async">
     </a>
     <div class="nav-menu">
       <a href="index.html" class="active">Inicio</a>
@@ -123,10 +92,14 @@ src="https://www.facebook.com/tr?id=1186794956275082&ev=PageView&noscript=1"
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg-carousel" aria-hidden="true">
-    <span class="hero-bg-slide hero-bg-aves is-active"></span>
-    <span class="hero-bg-slide hero-bg-nogales"></span>
-    <span class="hero-bg-slide hero-bg-pescado"></span>
-    <span class="hero-bg-slide hero-bg-riego"></span>
+    <picture class="hero-bg-slide hero-bg-aves is-active">
+      <source media="(max-width: 700px)" srcset="img/index-hero-aves-mobile.webp">
+      <img src="img/index-hero-aves.webp" width="1672" height="941" alt="" fetchpriority="high" decoding="async">
+    </picture>
+    <picture class="hero-bg-slide hero-bg-nogales">
+      <source media="(max-width: 700px)" srcset="img/index-hero-nogales-mobile.webp">
+      <img src="img/index-hero-nogales-carousel.webp" width="1672" height="941" alt="" decoding="async">
+    </picture>
   </div>
   <div class="hero-inner">
     <div>
@@ -374,10 +347,9 @@ src="https://www.facebook.com/tr?id=1186794956275082&ev=PageView&noscript=1"
 
 <script id="heroCarouselRuntime">
 (function(){
-  const slides = Array.from(document.querySelectorAll('.hero-bg-slide'));
+  const slides = Array.from(document.querySelectorAll('.hero-bg-carousel .hero-bg-slide'));
   if (slides.length < 2) return;
-  let current = slides.findIndex(slide => slide.classList.contains('is-active'));
-  if (current < 0) { current = 0; slides[0].classList.add('is-active'); }
+  let current = 0;
   window.setInterval(function(){
     slides[current].classList.remove('is-active');
     current = (current + 1) % slides.length;
