@@ -102,3 +102,10 @@ El sitio sigue siendo compatible con despliegue en Netlify o GitHub Pages. Si m�
 ---
 
 © 2026 MacKinnon Servicios Agropecuarios
+
+## 🧩 Soluciones digitales (header) y Gestión Avícola
+
+- El menú **Soluciones digitales** (dropdown) está en el header de todas las páginas. Estilos en `css/nav-soluciones.css`, comportamiento en `js/nav-soluciones.js`.
+- Para sumar otra solución: agregar un `<a class="nav-dd-item">` dentro de `#ddSoluciones` y un `<a>` dentro de `.mob-group` en cada página (la lista también está en el generador usado para esta entrega).
+- **Gestión Avícola (Avimanager)** vive en `gestion-avicola/` con sus mismos nombres de archivo (`index.html`, `solicitar-prueba.html`, `prueba-directa.html`, `prueba-confirmada.html`, `gracias.html`, `pago-fallido.html`, `privacidad.html`). Estilos propios en `gestion-avicola/assets/css/avimanager.css`.
+- Formularios MailerLite, enlaces de Hotmart/Flow, WhatsApp de Avimanager (+56 9 3679 6647) y tracking (GA4, Meta Pixel, Clarity con banner de cookies) se mantienen como en el sitio original.
