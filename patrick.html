@@ -53,6 +53,7 @@
 }
 </script>
   <link rel="preload" as="image" href="img/patrick-portrait.webp" fetchpriority="high">
+<link rel="stylesheet" href="css/nav-soluciones.css?v=20261107">
 </head>
 <body>
 
@@ -67,6 +68,12 @@
       <a href="andrew.html">Asesoría pecuaria y pesquera</a>
       <a href="imacimus.html">IMACIMUS</a>
       <a href="capacitaciones.html">Capacitaciones</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="ddSoluciones">Soluciones digitales <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dd-menu" id="ddSoluciones">
+          <a href="gestion-avicola/index.html" class="nav-dd-item"><span class="nav-dd-title">Gestión Avícola</span><span class="nav-dd-sub">Avimanager · software para granjas</span></a>
+        </div>
+      </div>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="nav-cta">
@@ -81,8 +88,13 @@
   <a href="andrew.html" onclick="closeMob()">Asesoría pecuaria y pesquera</a>
   <a href="imacimus.html" onclick="closeMob()">IMACIMUS 10</a>
   <a href="capacitaciones.html" onclick="closeMob()">Capacitaciones</a>
+  <div class="mob-group">
+    <span class="mob-group-label">Soluciones digitales</span>
+    <a href="gestion-avicola/index.html" onclick="closeMob()">Gestión Avícola</a>
+  </div>
   <a href="contacto.html" onclick="closeMob()">Contacto</a>
   <div class="mob-cta">
+    <a href="contacto.html" class="btn btn-primary" onclick="closeMob()">Solicitar diagnóstico</a>
     <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Patrick</a>
     <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-teal">WhatsApp Andrew</a>
   </div>
@@ -374,5 +386,6 @@
   <a href="https://wa.me/56992783969?text=Hola%2C%20quisiera%20consultar%20por%20los%20servicios%20Agr%C3%ADcolas" target="_blank" rel="noopener" class="wa-float-btn wa-solo" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.7.7 2.4.8 3.3.7.5-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 22a10 10 0 1 1 8.4-15.4L22 0l-1.6 5.8A10 10 0 0 1 12 22z"/></svg></a>
 </div>
 <script src="js/main.js"></script>
+<script src="js/nav-soluciones.js?v=20261107" defer></script>
 </body>
 </html>

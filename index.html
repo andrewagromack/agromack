@@ -54,6 +54,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="css/nav-soluciones.css?v=20261107">
 </head>
 <body>
 
@@ -66,9 +67,15 @@
     <div class="nav-menu">
       <a href="index.html" class="active">Inicio</a>
       <a href="patrick.html">Asesoría Agrícola</a>
-      <a href="andrew.html">Asesoría Pecuaria y Pesquera</a>
+      <a href="andrew.html">Asesoría pecuaria y pesquera</a>
       <a href="imacimus.html">IMACIMUS</a>
       <a href="capacitaciones.html">Capacitaciones</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-expanded="false" aria-haspopup="true" aria-controls="ddSoluciones">Soluciones digitales <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dd-menu" id="ddSoluciones">
+          <a href="gestion-avicola/index.html" class="nav-dd-item"><span class="nav-dd-title">Gestión Avícola</span><span class="nav-dd-sub">Avimanager · software para granjas</span></a>
+        </div>
+      </div>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="nav-cta">
@@ -80,12 +87,18 @@
 <div class="mobile-menu" id="mobMenu">
   <a href="index.html" onclick="closeMob()">Inicio</a>
   <a href="patrick.html" onclick="closeMob()">Asesoría Agrícola</a>
-  <a href="andrew.html" onclick="closeMob()">Asesoría Pecuaria y Pesquera</a>
-  <a href="imacimus.html" onclick="closeMob()">IMACIMUS</a>
+  <a href="andrew.html" onclick="closeMob()">Asesoría pecuaria y pesquera</a>
+  <a href="imacimus.html" onclick="closeMob()">IMACIMUS 10</a>
   <a href="capacitaciones.html" onclick="closeMob()">Capacitaciones</a>
+  <div class="mob-group">
+    <span class="mob-group-label">Soluciones digitales</span>
+    <a href="gestion-avicola/index.html" onclick="closeMob()">Gestión Avícola</a>
+  </div>
   <a href="contacto.html" onclick="closeMob()">Contacto</a>
   <div class="mob-cta">
-    <a href="contacto.html" class="btn btn-primary">Solicitar diagnóstico</a>
+    <a href="contacto.html" class="btn btn-primary" onclick="closeMob()">Solicitar diagnóstico</a>
+    <a href="https://wa.me/56992783969" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp Patrick</a>
+    <a href="https://wa.me/56998791270" target="_blank" rel="noopener" class="btn btn-teal">WhatsApp Andrew</a>
   </div>
 </div>
 
@@ -344,6 +357,7 @@
 </div>
 
 <script src="js/main.js"></script>
+<script src="js/nav-soluciones.js?v=20261107" defer></script>
 
 <script id="heroCarouselRuntime">
 (function(){
